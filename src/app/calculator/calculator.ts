@@ -13,15 +13,15 @@ export class Calculator {
   result:number=0;
 
 
-calculateResult(){
-  this.result = this.number1 - this.number2;
-}
+  calculateResult(){
+    this.result = this.number1 - this.number2;
+  }
 
-calculateResult2(){
-  this.result = this.number1 + this.number2;
-}
+  calculateResult2(){
+    this.result = this.number1 + this.number2;
+  }
 
-calculateResult3(){
-  this.result = this.number1 * this.number2;
-}
+  calculateResult3(){
+    this.result = this.number1 * this.number2;
+  }
 }
