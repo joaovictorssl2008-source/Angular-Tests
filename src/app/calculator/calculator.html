@@ -8,8 +8,13 @@
 
                 <label for="number2">Number 2:</label>
                 <input type="number" name="number2" id="number2" [(ngModel)]="number2"/>
+
                 <button type="button" (click)="calculateResult()">Subtract</button>
+
                 <button type="button" (click)="calculateResult2()">Add</button>
+
+                <button type="button" (click)="calculateResult3()">Multiply</button>
+
                 <div class="result-display">
                     <p>Result:<span id="result">{{result}}</span></p>
                     
