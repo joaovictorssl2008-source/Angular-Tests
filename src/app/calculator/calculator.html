@@ -1,25 +1,31 @@
 <div class ='calculator'>
     <div class='container'>
         <div class='form-box'>
-            <form frm="ngForm">
+            <form frm="ngForm" (ngSubmit)= "calculateResult()">
+
                 <h2>Calculator</h2>
+
                 <label for="number1">Number 1:</label>
                 <input type="number" id="number1" [(ngModel)]="number1" name="number1"/>
 
                 <label for="number2">Number 2:</label>
                 <input type="number" name="number2" id="number2" [(ngModel)]="number2"/>
 
-                <button type="button" (click)="calculateResult()">Subtract</button>
+                <button type="submit">Sum</button>
+            
+        <div class="result-display" *ngIf="result">
+            <p>Your calculation result is:</p></div>
 
-                <button type="button" (click)="calculateResult2()">Add</button>
-
-                <button type="button" (click)="calculateResult3()">Multiply</button>
-
-                <div class="result-display">
-                    <p>Result:<span id="result">{{result}}</span></p>
-                    
-                </div>
-                
             </form>
-        </div>
+        @if (result) {
+        
+            <div class="result-display">
+            <h3><span id="result">{{result}}</span></h3>
+            </div>
+        }   @else {
+            <div class="result-display">
+            <p>Your calculation result is ...</p>
+            </div>
+        }
+    </div>
 </div>

@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-
+import { CommonModule } from '@angular/common';
 @Component({
-  imports: [FormsModule],
+  imports: [FormsModule, CommonModule],
   selector: 'app-calculator',
   styleUrl: './calculator.scss',
   templateUrl: './calculator.html',
@@ -14,14 +14,6 @@ export class Calculator {
 
 
   calculateResult(){
-    this.result = this.number1 - this.number2;
-  }
-
-  calculateResult2(){
     this.result = this.number1 + this.number2;
-  }
-
-  calculateResult3(){
-    this.result = this.number1 * this.number2;
   }
 }
