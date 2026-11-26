@@ -16,16 +16,19 @@
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <td>1</td>
-                <td>Rice</td>
-                <td><input type="checkbox" /></td>
+            @for (element of list; track element.id) {
+                <tr>
+                    <td>{{element.id}}</td>
+                    <td>{{element.name}}</td>
+                    <td><input type="checkbox"/></td>
+                </tr>
+            }
+            @empty {
+            <tr colspan="3">
+                No item added!
             </tr>
-            <tr>
-                <td>2</td>
-                <td>Beans</td>
-                <td><input type="checkbox" /></td>
-            </tr>
+            }
+        
         </tbody>
     </table>
     

@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { itemLists } from './itemList'; 
+import { CommonModule } from '@angular/common';
 @Component({
-  imports: [FormsModule],
+  imports: [FormsModule, CommonModule],
   selector: 'app-groceries-list',
   styleUrl: './groceries-list.scss',
   templateUrl: './groceries-list.html',
