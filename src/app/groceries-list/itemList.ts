@@ -1,5 +1,5 @@
 export class itemLists{
-    id?: number;
+    id?: number = +1;
     name?: string;
     bought: boolean = false;
 }

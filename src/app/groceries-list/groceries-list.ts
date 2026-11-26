@@ -14,7 +14,7 @@ list: itemLists[] = [];
 addItem(){
   let ItemLists = new itemLists();
   ItemLists.name = this.item;
-  ItemLists.id = this.list.length;
+  ItemLists.id = this.list.length + 1;
 
   this.list.push(ItemLists)
 this.item="";
