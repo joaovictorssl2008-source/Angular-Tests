@@ -22,5 +22,8 @@ this.item="";
 console.table(this.list)
 
 }
+riskItem(ItemLists: itemLists){
+  ItemLists.bought = !ItemLists.bought
+}
 
 }
