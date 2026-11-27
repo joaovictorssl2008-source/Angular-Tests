@@ -3,7 +3,7 @@
     <form #frm="ngForm" class="add-item-form" (ngSubmit)="addItem()">
         <input type="text"
             name="item"
-            id="item"+ 1 [(ngModel)]="item" placeholder="Add an item"/>
+            id="item" [(ngModel)]="item" placeholder="Add an item"/>
             <button type="submit">Add</button>
     </form>
 
@@ -19,9 +19,19 @@
             @for (element of list; track element.id) {
                 <tr>
                     <td>{{element.id}}</td>
-                    <td>{{element.name}}</td>
+                    <td>
+                        <span [ngClass]="{'riskItem': element.name}">
+                        {{element.name}}
+                    </span>
+                    </td>
                     <td><input type="checkbox"/></td>
+                    <td>
+                        <input type="checkbox"
+                            (click)="riskItem(element)";
+                            [checked]="element.bought"/>
+                    </td>
                 </tr>
+            
             }
             @empty {
             <tr colspan="3">
