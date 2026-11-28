@@ -5,6 +5,7 @@
             name="item"
             id="item" [(ngModel)]="item" placeholder="Add an item"/>
             <button type="submit">Add</button>
+            <button type="button"(click)="clearList()">Clear List</button>
     </form>
 
     <table>
@@ -22,9 +23,8 @@
                     <td>
                         <span [ngClass]="{'riskItem': element.name}">
                         {{element.name}}
-                    </span>
+                        </span>
                     </td>
-                    <td><input type="checkbox"/></td>
                     <td>
                         <input type="checkbox"
                             (click)="riskItem(element)";

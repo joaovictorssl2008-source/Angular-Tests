@@ -1,5 +1,5 @@
-export class itemLists{
-    id?: number = +1;
+export class item_list {
+    id?: number;
     name?: string;
     bought: boolean = false;
 }
